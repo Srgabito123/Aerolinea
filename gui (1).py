@@ -24,6 +24,31 @@ ida = f"Ida: {lugar_salida} - {lugar_llegada}"
 precio = "2.000.000"
 fecha = "2024-06-13"
 flechita = "-------------------------------------->"
+aluminio = """
+1 artículo personal (bolso) (Debe caber debajo del asiento)
+1 equipaje de mano (10 kg) (Desde $195.100 COP)
+Equipaje de bodega (23 kg) (Desde $175.600 COP)
+Asiento Economy (Aleatoria-clasificado Aluminio)
+Cambios de vuelo (No es permitido)
+Reembolso (No es permitido)"""
+
+diamante = """
+1 artículo personal (bolso) (Debe caber debajo del asiento)
+1 equipaje de bodega (23 kg) (Debe caber en el compartimiento superior)
+1 equipaje de mano (10 kg) (Entrega el equipaje en el counter)
+Asiento Economy (Filas específicas disponibles de manera aleatoria)
+Cambios de vuelo (No es permitido)
+Reembolso (No es permitido)"""
+
+premium = """
+1 artículo personal (bolso) (Debe caber debajo del asiento)
+1 equipaje de mano (10 kg) (Debe caber en el compartimiento superior)
+1 equipaje de bodega (23 kg) (Entrega el equipaje en el counter)
+Asiento Plus (Sujeto a disponibilidad-clasificado Premium)
+Cambios de vuelo (Sin cargo por cambio, antes del vuelo)
+Reembolso (No es permitido)
+"""
+
 
 #---------------------------FONTS---------------------------
 font_1 = ctk.CTkFont(family="Inherit", size=18, weight="bold")
@@ -93,13 +118,13 @@ frame_diamante = ctk.CTkFrame(master = frame_eleccion_vuelo,
                           corner_radius=32)
 frame_diamante.place(relx=0.50, rely=0.03, anchor="n")
 
-frame_esmeralda = ctk.CTkFrame(master = frame_eleccion_vuelo,
+frame_premium = ctk.CTkFrame(master = frame_eleccion_vuelo,
                           width=250,
                           height=430, 
                           fg_color="white",
                           border_width=2,
                           corner_radius=32)
-frame_esmeralda.place(relx=0.83, rely=0.03, anchor="n")
+frame_premium.place(relx=0.83, rely=0.03, anchor="n")
 
 #---------------------------TEXTOS---------------------------
 text_viaje = ctk.CTkLabel(master = frame_principal, 
