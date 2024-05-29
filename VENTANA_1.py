@@ -23,11 +23,12 @@ center_y = int(screen_height / 2 - window_height / 2)
 #SE DA ATRIBUTOS A LA VENTANA
 ventana1.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
 ventana1.config(background="#d7bb9f")
+ventana1.title("Mapaula airline")
 
 #SE AGREGAN WIDGETS
 #IMPORTANDO Y PONIENDO LA IMÁGEN
-imagen1 = ctk.CTkImage(light_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/LOGO AEROLINEA.png"),
-                      dark_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/LOGO AEROLINEA.png"),
+imagen1 = ctk.CTkImage(light_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/Repositorio/LOGO AEROLINEA.png"),
+                      dark_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/Repositorio/LOGO AEROLINEA.png"),
                       size = (340, 340))
 imagen1_label = ctk.CTkLabel(ventana1, image=imagen1, text = "", bg_color="#d7bb9f")
 imagen1_label.place(x=330, y=1)
@@ -65,6 +66,8 @@ caja2 = ctk.CTkEntry(ventana1,
 caja2.place(x=560, y=350)
 
 #CREACION DE BOTON
+
+
 boton = ctk.CTkButton(ventana1, 
                       text="Realizar Check-In",
                       text_color="white", 
