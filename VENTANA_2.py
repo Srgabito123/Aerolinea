@@ -1,17 +1,23 @@
 import customtkinter as ctk
 from PIL import Image, ImageTk
 
+def buscar():
+    pass
+
+
 #SE CREA LA VENTANA 2 Y SE BLOQUEA SU TAMAÑO
 ventana2 = ctk.CTk()
 ventana2.resizable(0, 0)
 
 #FRAME PRINCIPAL
-frame1 = ctk.CTkFrame(ventana2, 
+frame1 = ctk.CTkFrame(ventana2,
+                      bg_color="#d7bb9f", 
                       fg_color = "#d7bb9f", 
                       width = 860, 
                       height = 400, 
                       border_color = "beige", 
-                      border_width = 4).place(x = 70, y = 70)
+                      border_width = 4,
+                      corner_radius = 15).place(x = 70, y = 70)
 
 borde_desplegable = ctk.CTkFrame(ventana2, 
                       fg_color = "#d7bb9f",
@@ -48,6 +54,15 @@ borde_destino = ctk.CTkFrame(ventana2,
                       border_color = "#a06553", 
                       border_width = 3,
                       corner_radius = 0).place(x = 250, y = 241)
+
+fechas_destino = ctk.CTkFrame(ventana2, 
+                      fg_color = "#d7bb9f",
+                      bg_color = "#d7bb9f", 
+                      width = 196, 
+                      height = 50, 
+                      border_color = "#a06553", 
+                      border_width = 3,
+                      corner_radius = 0).place(x = 647, y = 241)
 
 linea_divisora = ctk.CTkFrame(ventana2, 
                       fg_color = "#d7bb9f", 
@@ -126,7 +141,8 @@ icon_personas_label = ctk.CTkLabel(entry_frame,
                                    height = 30)
 icon_personas_label.grid(row=0, column=0, sticky="nsew", padx=(5, 0))
 
-ciudades_origen = ["Bogotá", "Medellin", "Santa Marta", "Cali", "Cartagena"] 
+#CREACION DESPLEGABLE CIUDAD DE ORIGEN
+ciudades_origen = ["Bogotá (BOG)", "Medellin (MDE)", "Santa Marta (SMR)", "Cali (CLO)", "Cartagena (CTG)"] 
 valor_origen = ctk.StringVar() 
 valor_origen.set(ciudades_origen[0]) 
 opciones_origen = ctk.CTkOptionMenu(ventana2, 
@@ -157,8 +173,8 @@ origen_label = ctk.CTkLabel(ventana2,
 
 opciones_origen.place(x = 100, y = 260)
 
-
-ciudades_destino = ["Bogotá", "Medellin", "Santa Marta", "Cali", "Cartagena"] 
+#CREACION DESPLEGABLE CIUDAD DE DESTINO
+ciudades_destino = ["Bogotá (BOG)", "Medellin (MDE)", "Santa Marta (SMR)", "Cali (CLO)", "Cartagena (CTG)"] 
 valor_destino = ctk.StringVar() 
 opciones_destino = ctk.CTkOptionMenu(ventana2, 
                                         variable = valor_destino, 
@@ -187,5 +203,63 @@ destino_label = ctk.CTkLabel(ventana2,
                             anchor = "w").place(x = 253, y = 244)
 
 opciones_destino.place(x = 253, y = 260)
+
+#CREACION DESPLEGABLE FECHAS IDA
+fechas_ida = ["5/06/2024", 
+              "6/06/2024", 
+              "12/06/2024", 
+              "13/06/2024", 
+              "19/06/2024", 
+              "20/06/2024", 
+              "26/06/2024", 
+              "27/06/2024"]
+valor_fechas = ctk.StringVar() 
+valor_fechas.set(fechas_ida[0])
+fechas_vuelo = ctk.CTkOptionMenu(ventana2, 
+                                        variable = valor_fechas, 
+                                        values = fechas_ida,
+                                        width = 190,
+                                        font=("Poppins", 16),
+                                        text_color = "brown",
+                                        bg_color = "beige",
+                                        fg_color = "beige",
+                                        cursor = "hand2",
+                                        button_color = "beige",
+                                        button_hover_color = "#a06553",
+                                        dropdown_font = ("Poppins", 16),
+                                        dropdown_text_color = "brown",
+                                        dropdown_hover_color = "#a06553",
+                                        dropdown_fg_color = "beige",
+                                        corner_radius = 2)
+fechas_ida_label = ctk.CTkLabel(ventana2, 
+                            text = "Fecha ida",
+                            width = 190,
+                            height = 16,
+                            font=("Poppins", 12), 
+                            text_color = "brown",
+                            fg_color = "beige", 
+                            bg_color = "#d7bb9f",
+                            anchor = "w").place(x = 650, y = 244)
+
+fechas_vuelo.place(x = 650, y = 260)
+
+#CREACION BOTON DE BÚSQUEDA
+
+boton_buscar = ctk.CTkButton(ventana2, 
+                      text="Buscar",
+                      text_color="white", 
+                      width=150, 
+                      height=40,
+                      font=("Poppins", 16),
+                      bg_color="#d7bb9f",
+                      fg_color="#a06553",
+                      cursor="hand2",
+                      hover_color="beige",
+                      command = buscar)
+boton_buscar.place(x=425, y=370)
+
+
+
+
 
 ventana2.mainloop()
