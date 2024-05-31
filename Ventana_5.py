@@ -27,7 +27,7 @@ ida = f"Ida: {lugar_salida} - {lugar_llegada}"
 precio = "2.000.000"
 fecha = "2024-06-13"
 flechita = "-------------------------------------->"
-aluminio = """
+plata = """
 1 artículo personal (bolso) 
 (Debe caber debajo del asiento)
 
@@ -62,6 +62,7 @@ Asiento Economy
 Cambios de vuelo (No es permitido)
 
 Reembolso (No es permitido)"""
+
 premium = """
 1 artículo personal (bolso) 
 (Debe caber debajo del asiento)
@@ -109,9 +110,9 @@ frame_eleccion_vuelo = ctk.CTkFrame(master = frame_principal,
                           border_width=2,
                           border_color="beige",
                           corner_radius=32)
-frame_eleccion_vuelo.place_forget()
 
 #---------------------------BOTONES---------------------------
+
 opcion1 = ctk.CTkButton(master = frame_vuelos,    
                           width = 890, 
                           height = 160, 
@@ -239,7 +240,7 @@ vuelo_directo = ctk.CTkButton(master = frame_principal,
                         hover_color = "light blue"
                         )
 
-aluminio_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
+plata_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
                           width=285,
                           height=400, 
                           fg_color="beige",
@@ -247,7 +248,7 @@ aluminio_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
                           corner_radius=32,
                           hover_color= "beige",
                           text= "")
-aluminio_clase.place(relx=0.17, rely=0.03, anchor="n")
+
 
 diamante_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
                           width=285,
@@ -256,7 +257,7 @@ diamante_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
                           hover_color= "beige",
                           border_width=2,
                           corner_radius=32)
-diamante_clase.place(relx=0.50, rely=0.03, anchor="n")
+
 
 premium_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
                           width=285,
@@ -265,9 +266,9 @@ premium_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
                           hover_color= "beige",
                           border_width=2,
                           corner_radius=32)
-premium_clase.place(relx=0.83, rely=0.03, anchor="n")
 
-seleccionar_aluminio = ctk.CTkButton(master = aluminio_clase,
+
+seleccionar_plata = ctk.CTkButton(master = plata_clase,
                           width=230,
                           height=30, 
                           font = (font_1, 15),
@@ -312,7 +313,7 @@ cerrar_ventana = ctk.CTkButton(master = frame_eleccion_vuelo,
                             text="Cerrar",
                             command=cerrar_ventana
                             )
-cerrar_ventana.place(relx=0.5, rely=0.93, anchor="center")  
+
 
 #---------------------------TEXTOS---------------------------
 
@@ -400,8 +401,8 @@ text_filtrar = ctk.CTkLabel(master = frame_principal,
                         bg_color = "transparent"
                         )
 
-nombre_aluminio = ctk.CTkLabel(master = aluminio_clase,
-                        text = "Aluminio",
+nombre_plata = ctk.CTkLabel(master = plata_clase,
+                        text = "Plata",
                         fg_color = "transparent",
                         text_color = "black",
                         font = font_1,
@@ -409,8 +410,8 @@ nombre_aluminio = ctk.CTkLabel(master = aluminio_clase,
                         height = 0.3
                         )
 
-texto_aluminio = ctk.CTkLabel(master = aluminio_clase,
-                        text = aluminio,
+texto_plata = ctk.CTkLabel(master = plata_clase,
+                        text = plata,
                         fg_color = "transparent",
                         bg_color= "transparent",
                         text_color = "black",
@@ -460,14 +461,19 @@ texto_premium = ctk.CTkLabel(master = premium_clase,
 #---------------------------POSICIONAMIENTO-----------------------
 frame_principal.place(relx = 0.5, rely = 0.5, anchor = "center")
 frame_vuelos.place(relx = 0.5, rely = 0.59, anchor = "center")
+frame_eleccion_vuelo.place_forget()
 text_viaje.place(x = 6, y = 8, relwidth = 0.3, relheight = 0.065)
 text_filtrar.place(x = 593, y = 8, relwidth = 0.08, relheight = 0.05)
-nombre_aluminio.place(relx=0.5, rely=0.05, anchor="center")
-texto_aluminio.place(relx=0.5, rely=0.42, anchor="center")
+plata_clase.place(relx=0.17, rely=0.03, anchor="n")
+diamante_clase.place(relx=0.50, rely=0.03, anchor="n")
+premium_clase.place(relx=0.83, rely=0.03, anchor="n")
+nombre_plata.place(relx=0.5, rely=0.05, anchor="center")
+texto_plata.place(relx=0.5, rely=0.42, anchor="center")
 nombre_diamante.place(relx=0.5, rely=0.05, anchor="center")
 texto_diamante.place(relx=0.5, rely=0.45, anchor="center")
 nombre_premium.place(relx=0.5, rely=0.05, anchor="center")
 texto_premium.place(relx=0.5, rely=0.45, anchor="center")
+cerrar_ventana.place(relx=0.5, rely=0.93, anchor="center")  
 mejor_precio.place(x = 686, y = 8, relwidth = 0.12, relheight = 0.05)
 vuelo_directo.place(x = 825, y = 8, relwidth = 0.14, relheight = 0.05)
 boton_dias1.place(x = 20, y = 76, relwidth = 0.16, relheight = 0.057)
@@ -486,7 +492,7 @@ text_lugar_llegada.place(relx = 0.5, rely = 0.54, anchor = "center")
 text_desde.place(relx = 0.65, rely = 0.4, anchor = "center")
 text_precio.place(relx = 0.8, rely = 0.53, anchor = "center")
 text_flechita.place(relx = 0.3, rely = 0.45, anchor = "center")
-seleccionar_aluminio.place(relx=0.5, rely=0.93, anchor="center")
+seleccionar_plata.place(relx=0.5, rely=0.93, anchor="center")
 seleccionar_diamante.place(relx=0.5, rely=0.93, anchor="center")
 seleccionar_premium.place(relx=0.5, rely=0.93, anchor="center")
 root.mainloop()
