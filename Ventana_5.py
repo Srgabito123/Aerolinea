@@ -83,71 +83,79 @@ Cambios de vuelo
 Reembolso (No es permitido)"""
 
 #---------------------------FONTS---------------------------
+
 font_1 = ctk.CTkFont(family="Inherit", size=18, weight="bold")
+
 #---------------------------FRAMES---------------------------
+
 frame_principal = ctk.CTkFrame(master = root,
-                           width = 1000,
-                           height = 600,
-                           corner_radius = 10,
-                           fg_color = "light pink",
-                           border_color = "white",
-                           border_width = 2,
-                           bg_color = "transparent"
-                           )
+                        width = 1000,
+                        height = 600,
+                        corner_radius = 10,
+                        fg_color = "light pink",
+                        border_color = "white",
+                        border_width = 2,
+                        bg_color = "transparent"
+                        )
+
 frame_vuelos = ctk.CTkScrollableFrame(master = frame_principal,
-                          width = 930,
-                          height = 400,
-                          fg_color = "transparent",
-                          corner_radius = 30,
-                          scrollbar_button_color = "beige",
-                          orientation = "vertical"
-                          )
+                        width = 930,
+                        height = 400,
+                        fg_color = "transparent",
+                        corner_radius = 30,
+                        scrollbar_button_color = "beige",
+                        orientation = "vertical"
+                        )
 
 frame_eleccion_vuelo = ctk.CTkFrame(master = frame_principal,
-                          width=940,
-                          height=470, 
-                          fg_color="white",
-                          border_width=2,
-                          border_color="beige",
-                          corner_radius=32)
+                        width=940,
+                        height=470, 
+                        fg_color="white",
+                        border_width=2,
+                        border_color="beige",
+                        corner_radius=32
+                        )
 
 #---------------------------BOTONES---------------------------
 
 opcion1 = ctk.CTkButton(master = frame_vuelos,    
-                          width = 890, 
-                          height = 160, 
-                          corner_radius = 50,
-                          fg_color = "beige",
-                          hover_color = "beige",
-                          text = " ",
-                          border_color= "black",
-                          border_width= 1.5,
-                          command=eleccion_vuelo
-                          )
+                        width = 890, 
+                        height = 160, 
+                        corner_radius = 50,
+                        fg_color = "beige",
+                        hover_color = "beige",
+                        text = " ",
+                        border_color= "black",
+                        border_width= 1.5,
+                        command=eleccion_vuelo
+                        )
+
 opcion2 = ctk.CTkButton(master = frame_vuelos, 
-                          fg_color = "beige",  
-                          width = 890, 
-                          height = 160, 
-                          corner_radius = 50,
-                          bg_color = "light pink",
-                          hover_color = "beige",
-                          text = " ",
-                          border_color= "black",
-                          border_width= 1.5,
-                          command=eleccion_vuelo
-                          )
+                        fg_color = "beige",  
+                        width = 890, 
+                        height = 160, 
+                        corner_radius = 50,
+                        bg_color = "light pink",
+                        hover_color = "beige",
+                        text = " ",
+                        border_color= "black",
+                        border_width= 1.5,
+                        command=eleccion_vuelo
+                        )
+
 opcion3 = ctk.CTkButton(master = frame_vuelos,
-                          fg_color = "beige",  
-                          width = 890, 
-                          height = 160, 
-                          corner_radius = 50,
-                          bg_color = "light pink",
-                          hover_color = "beige",
-                          text = " ",
-                          border_color= "black",
-                          border_width= 1.5,
-                          command=eleccion_vuelo
-                          )
+                        fg_color = "beige",  
+                        width = 890, 
+                        height = 160, 
+                        corner_radius = 50,
+                        bg_color = "light pink",
+                        hover_color = "beige",
+                        text = " ",
+                        border_color= "black",
+                        border_width= 1.5,
+                        command=eleccion_vuelo
+                        )
+
 opcion4 = ctk.CTkButton(master = frame_vuelos,
                         fg_color = "beige",  
                         width = 890, 
@@ -160,6 +168,7 @@ opcion4 = ctk.CTkButton(master = frame_vuelos,
                         border_width= 1.5,
                         command=eleccion_vuelo
                         )
+
 boton_dias1 = ctk.CTkButton(master = frame_principal,
                         text = f"Fecha: {fecha}",
                         font = (font_1, 13), 
@@ -170,7 +179,9 @@ boton_dias1 = ctk.CTkButton(master = frame_principal,
                         border_color= "black",
                         border_width= 1.5, 
                         fg_color = "beige",  
-                        hover_color = "light blue")
+                        hover_color = "light blue"
+                        )
+
 boton_dias2 = ctk.CTkButton(master = frame_principal,
                         text = f"Fecha: {fecha}",
                         font = (font_1, 13), 
@@ -181,7 +192,9 @@ boton_dias2 = ctk.CTkButton(master = frame_principal,
                         border_color= "black",
                         border_width= 1.5,
                         fg_color = "beige",  
-                        hover_color = "light blue")
+                        hover_color = "light blue"
+                        )
+
 boton_dias3 = ctk.CTkButton(master = frame_principal,
                         text = f"Fecha: {fecha}",
                         font = (font_1, 13), 
@@ -192,7 +205,9 @@ boton_dias3 = ctk.CTkButton(master = frame_principal,
                         border_color= "black",
                         border_width= 1.5,
                         fg_color = "beige",  
-                        hover_color = "light blue")
+                        hover_color = "light blue"
+                        )
+
 boton_dias4 = ctk.CTkButton(master = frame_principal,
                         text = f"Fecha: {fecha}",
                         font = (font_1, 13), 
@@ -203,7 +218,9 @@ boton_dias4 = ctk.CTkButton(master = frame_principal,
                         border_color= "black",
                         border_width= 1.5, 
                         fg_color = "beige",  
-                        hover_color = "light blue")
+                        hover_color = "light blue"
+                        )
+
 boton_dias5 = ctk.CTkButton(master = frame_principal,
                         text = f"Fecha: {fecha}",
                         font = (font_1, 13), 
@@ -214,7 +231,9 @@ boton_dias5 = ctk.CTkButton(master = frame_principal,
                         border_color= "black",
                         border_width= 1.5, 
                         fg_color = "beige",  
-                        hover_color = "light blue")
+                        hover_color = "light blue"
+                        )
+
 mejor_precio = ctk.CTkButton(master = frame_principal,
                         text = "Mejor precio",
                         font = (font_1, 13),
@@ -227,6 +246,7 @@ mejor_precio = ctk.CTkButton(master = frame_principal,
                         fg_color = "beige",
                         hover_color = "light blue"
                         )
+
 vuelo_directo = ctk.CTkButton(master = frame_principal, 
                         text = "Vuelos directos",
                         font = (font_1, 13),
@@ -241,139 +261,141 @@ vuelo_directo = ctk.CTkButton(master = frame_principal,
                         )
 
 plata_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
-                          width=285,
-                          height=400, 
-                          fg_color="beige",
-                          border_width=2,
-                          corner_radius=32,
-                          hover_color= "beige",
-                          text= "")
-
+                        width=285,
+                        height=400, 
+                        fg_color="beige",
+                        border_width=2,
+                        corner_radius=32,
+                        hover_color= "beige",
+                        text= "")
 
 diamante_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
-                          width=285,
-                          height=400, 
-                          fg_color="beige",
-                          hover_color= "beige",
-                          border_width=2,
-                          corner_radius=32)
-
+                        width=285,
+                        height=400, 
+                        fg_color="beige",
+                        hover_color= "beige",
+                        border_width=2,
+                        corner_radius=32)
 
 premium_clase = ctk.CTkButton(master = frame_eleccion_vuelo,
-                          width=285,
-                          height=400, 
-                          fg_color="beige",
-                          hover_color= "beige",
-                          border_width=2,
-                          corner_radius=32)
-
+                        width=285,
+                        height=400, 
+                        fg_color="beige",
+                        hover_color= "beige",
+                        border_width=2,
+                        corner_radius=32)
 
 seleccionar_plata = ctk.CTkButton(master = plata_clase,
-                          width=230,
-                          height=30, 
-                          font = (font_1, 15),
-                          fg_color="light pink",
-                          hover_color= "light blue",
-                          border_width=2,
-                          corner_radius=36,
-                          text_color="black",
-                          text="Seleccionar")
+                        width=230,
+                        height=30, 
+                        font = (font_1, 15),
+                        fg_color="light pink",
+                        hover_color= "light blue",
+                        border_width=2,
+                        corner_radius=36,
+                        text_color="black",
+                        text="Seleccionar")
 
 seleccionar_diamante = ctk.CTkButton(master = diamante_clase,
-                            width=230,
-                            height=30, 
-                            font = (font_1, 15),
-                            fg_color="light pink",
-                            hover_color= "light blue",
-                            border_width=2,
-                            corner_radius=36,
-                            text_color="black",
-                            text="Seleccionar")
+                        width=230,
+                        height=30, 
+                        font = (font_1, 15),
+                        fg_color="light pink",
+                        hover_color= "light blue",
+                        border_width=2,
+                        corner_radius=36,
+                        text_color="black",
+                        text="Seleccionar")
 
 seleccionar_premium = ctk.CTkButton(master = premium_clase,
-                            width=230,
-                            height=30, 
-                            font = (font_1, 15),
-                            fg_color="light pink",
-                            hover_color= "light blue",
-                            border_width=2,                    
-                            corner_radius=36,
-                            text_color="black",
-                            text="Seleccionar")
+                        width=230,
+                        height=30, 
+                        font = (font_1, 15),
+                        fg_color="light pink",
+                        hover_color= "light blue",
+                        border_width=2,                    
+                        corner_radius=36,
+                        text_color="black",
+                        text="Seleccionar")
 
 cerrar_ventana = ctk.CTkButton(master = frame_eleccion_vuelo,
-                            width=230,
-                            height=30, 
-                            font = (font_1, 15),
-                            fg_color="light blue",
-                            hover_color= "light pink",
-                            border_width=2,
-                            corner_radius=36,
-                            text_color="black",
-                            text="Cerrar",
-                            command=cerrar_ventana
-                            )
-
+                        width=230,
+                        height=30, 
+                        font = (font_1, 15),
+                        fg_color="light blue",
+                        hover_color= "light pink",
+                        border_width=2,
+                        corner_radius=36,
+                        text_color="black",
+                        text="Cerrar",
+                        command=cerrar_ventana
+                        )
 
 #---------------------------TEXTOS---------------------------
 
 text_viaje = ctk.CTkLabel(master = frame_principal, 
-                      text = ida, 
-                      fg_color = "beige", 
-                      width = 0.2, 
-                      height = 0.065, 
-                      text_color = "black", 
-                      font = font_1, 
-                      corner_radius = 10, 
-                      bg_color = "light pink",
-                      )
-text_hora_salida = ctk.CTkLabel(master = opcion1, 
-                            text = hora_salida,
-                            fg_color = "transparent",
-                            bg_color= "beige",
-                            text_color = "black",
-                            font = font_1,
-                            width = 0.1,
-                            height = 0.3
-                            )
-text_hora_llegada = ctk.CTkLabel(master = opcion1, 
-                            text = hora_llegada,
-                            fg_color = "beige",
-                            text_color = "black",
-                            font = font_1,
-                            width = 0.1,
-                            height = 0.3,
-                            corner_radius = 10,
-                            )
-text_lugar_salida = ctk.CTkLabel(master = opcion1, 
-                            text = lugar_salida,
-                            fg_color = "Beige",
-                            text_color = "black",
-                            font = font_1,
-                            width = 0.1,
-                            height = 0.3,
-                            corner_radius = 10,
-                            )
-text_lugar_llegada = ctk.CTkLabel(master = opcion1, 
-                            text = lugar_llegada,
-                            fg_color = "Beige",
-                            text_color = "black",
-                            font = font_1,
-                            width = 0.1,
-                            height = 0.3,
-                            corner_radius = 10,
-                            )
-text_desde = ctk.CTkLabel(master = opcion1,
-                      text = """DESDE:
+                        text = ida, 
+                        fg_color = "beige", 
+                        width = 0.2, 
+                        height = 0.065, 
+                        text_color = "black", 
+                        font = font_1, 
+                        corner_radius = 10, 
+                        bg_color = "light pink",
+                        )
 
-                         COP $""",
-                      fg_color = "transparent",
-                      text_color = "black",
-                      font = font_1,
-                      width = 0.1,
-                      height = 0.3,
-                      corner_radius = 10,
-                      )
+text_hora_salida = ctk.CTkLabel(master = opcion1, 
+                        text = hora_salida,
+                        fg_color = "transparent",
+                        bg_color= "beige",
+                        text_color = "black",
+                        font = font_1,
+                        width = 0.1,
+                        height = 0.3
+                        )
+
+text_hora_llegada = ctk.CTkLabel(master = opcion1, 
+                        text = hora_llegada,
+                        fg_color = "beige",
+                        text_color = "black",
+                        font = font_1,
+                        width = 0.1,
+                        height = 0.3,
+                        corner_radius = 10,
+                        )
+
+text_lugar_salida = ctk.CTkLabel(master = opcion1, 
+                        text = lugar_salida,
+                        fg_color = "Beige",
+                        text_color = "black",
+                        font = font_1,
+                        width = 0.1,
+                        height = 0.3,
+                        corner_radius = 10,
+                        )
+
+text_lugar_llegada = ctk.CTkLabel(master = opcion1, 
+                        text = lugar_llegada,
+                        fg_color = "Beige",
+                        text_color = "black",
+                        font = font_1,
+                        width = 0.1,
+                        height = 0.3,
+                        corner_radius = 10,
+                        )
+
+text_desde = ctk.CTkLabel(master = opcion1,
+                        text = """DESDE:
+
+                            COP $""",
+                        fg_color = "transparent",
+                        text_color = "black",
+                        font = font_1,
+                        width = 0.1,
+                        height = 0.3,
+                        corner_radius = 10,
+                        )
+
 text_precio = ctk.CTkLabel(master = opcion1,
                         text = precio,
                         fg_color = "beige",
@@ -383,6 +405,7 @@ text_precio = ctk.CTkLabel(master = opcion1,
                         height = 0.3,
                         corner_radius = 10,
                         )
+
 text_flechita = ctk.CTkLabel(master = opcion1,
                         text = flechita,
                         fg_color = "beige",
@@ -391,6 +414,7 @@ text_flechita = ctk.CTkLabel(master = opcion1,
                         width = 0.3,
                         height = 0.3,
                         )
+
 text_filtrar = ctk.CTkLabel(master = frame_principal,
                         text = "Filtrar por:",
                         fg_color = "transparent",
@@ -459,6 +483,7 @@ texto_premium = ctk.CTkLabel(master = premium_clase,
                         )
                     
 #---------------------------POSICIONAMIENTO-----------------------
+
 frame_principal.place(relx = 0.5, rely = 0.5, anchor = "center")
 frame_vuelos.place(relx = 0.5, rely = 0.59, anchor = "center")
 frame_eleccion_vuelo.place_forget()
