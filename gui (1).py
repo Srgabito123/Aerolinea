@@ -1,6 +1,6 @@
 from tkinter import *
 import customtkinter as ctk
-#ventana 4
+
 root = ctk.CTk()
 root.title("CONDOR")
 root._set_appearance_mode("light")
@@ -54,45 +54,45 @@ Reembolso (No es permitido)
 font_1 = ctk.CTkFont(family="Inherit", size=18, weight="bold")
 #---------------------------FRAMES---------------------------
 frame_principal = ctk.CTkFrame(master = root,
-                           width = 1000,
-                           height = 600,
-                           corner_radius = 10,
-                           fg_color = "light pink",
-                           border_color = "white",
-                           border_width = 2
-                           )
+                        width = 1000,
+                        height = 600,
+                        corner_radius = 10,
+                        fg_color = "light pink",
+                        border_color = "white",
+                        border_width = 2
+                        )
 
 opcion1 = ctk.CTkFrame(master = frame_principal, 
-                          bg_color = "light pink",    
-                          width = 0.9, 
-                          height = 0.2, 
-                          corner_radius = 30,
-                          fg_color = "beige"
-                          )
+                        bg_color = "light pink",    
+                        width = 0.9, 
+                        height = 0.2, 
+                        corner_radius = 30,
+                        fg_color = "beige"
+                        )
 
 opcion2 = ctk.CTkFrame(master = frame_principal, 
-                          fg_color = "beige",  
-                          width = 0.9, 
-                          height = 0.2, 
-                          corner_radius = 30,
-                          bg_color = "light pink"
-                          )
+                        fg_color = "beige",  
+                        width = 0.9, 
+                        height = 0.2, 
+                        corner_radius = 30,
+                        bg_color = "light pink"
+                        )
 
 opcion3 = ctk.CTkFrame(master = frame_principal,
-                          fg_color = "beige",  
-                          width = 0.9, 
-                          height = 0.2, 
-                          corner_radius = 30,
-                          bg_color = "light pink"
-                          )
+                        fg_color = "beige",  
+                        width = 0.9, 
+                        height = 0.2, 
+                        corner_radius = 30,
+                        bg_color = "light pink"
+                        )
 
 opcion4 = ctk.CTkFrame(master = frame_principal,
-                          fg_color = "beige",
-                          bg_color = "light pink",
-                          width = 0.9, 
-                          height = 0.2, 
-                          corner_radius = 30
-                          )
+                        fg_color = "beige",
+                        bg_color = "light pink",
+                        width = 0.9, 
+                        height = 0.2, 
+                        corner_radius = 30
+                        )
 
 frame_eleccion_vuelo = ctk.CTkFrame(master = frame_principal,
                           width=825,
@@ -119,11 +119,12 @@ frame_diamante = ctk.CTkFrame(master = frame_eleccion_vuelo,
 frame_diamante.place(relx=0.50, rely=0.03, anchor="n")
 
 frame_premium = ctk.CTkFrame(master = frame_eleccion_vuelo,
-                          width=250,
+                      width=250,
                           height=430, 
                           fg_color="white",
                           border_width=2,
-                          corner_radius=32)
+                          corner_radius=32,
+                          )
 frame_premium.place(relx=0.83, rely=0.03, anchor="n")
 
 #---------------------------TEXTOS---------------------------
