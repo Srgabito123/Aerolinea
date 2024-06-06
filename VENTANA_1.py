@@ -1,84 +1,114 @@
 import customtkinter as ctk
 from PIL import Image
+#------------------------------FUNCTIONS------------------------------------------
 
-#FUNCION PARA DESPUES
 def check_in():
-    caja1.delete(0, ctk.END)
-    caja2.delete(0, ctk.END)
+    text_box_1.delete(0, ctk.END)
+    text_box_2.delete(0, ctk.END)
+    
+#-------------------------------VENTANA 1------------------------------------------
 
-#SE CREA LA VENTANA 1 Y SE BLOQUEA SU TAMAÑO
 ventana1 = ctk.CTk()
 ventana1.resizable(0, 0)
-
-#SE CONSIGUE EL TAMAÑO DE LA PANTALLA Y SE GUARDA EN UNA VARIABLE LAS MEDIDAS DE VENTANA
 screen_width = ventana1.winfo_screenwidth()
 screen_height = ventana1.winfo_screenheight()
 window_width = 1000
 window_height = 600
-
-#SE CALCULA EL CENTRO
 center_x = int(screen_width / 2 - window_width / 2)
 center_y = int(screen_height / 2 - window_height / 2)
-
-#SE DA ATRIBUTOS A LA VENTANA
 ventana1.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
 ventana1.config(background="#d7bb9f")
 ventana1.title("Mapaula airline")
 
-#SE AGREGAN WIDGETS
-#IMPORTANDO Y PONIENDO LA IMÁGEN
-imagen1 = ctk.CTkImage(light_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/Repositorio/LOGO AEROLINEA.png"),
-                      dark_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/Repositorio/LOGO AEROLINEA.png"),
-                      size = (340, 340))
-imagen1_label = ctk.CTkLabel(ventana1, image=imagen1, text = "", bg_color="#d7bb9f")
-imagen1_label.place(x=330, y=1)
+#----------------------------------------FONTS-------------------------------------
 
+font_1 = ctk.CTkFont(family="Inherit", size=18, weight="bold")
+font_2 = ctk.CTkFont(family="Cooper Black", size=12)
 
-#CREACIÓN DE TITULOS Y CAJAS DE TEXTO
-texto1 = ctk.CTkLabel(ventana1, 
-                      text="Código", 
-                      width=150, 
-                      height=40, 
-                      bg_color="#d7bb9f",
-                      font=("Poppins", 18))
-texto1.place(x=270, y=300)
-caja1 = ctk.CTkEntry(ventana1, 
-                     width=190, 
-                     height=30, 
-                     bg_color="#d7bb9f", 
-                     border_width=3,
-                     border_color="#a06553")
-caja1.place(x=250, y=350)
+#-------------------------------------IMÁGEN--------------------------------------
 
-texto2 = ctk.CTkLabel(ventana1, 
-                      text="Apellido", 
-                      width=150, 
-                      height=40, 
-                      bg_color="#d7bb9f",
-                      font=("Poppins", 18))
-texto2.place(x=580, y=300)
-caja2 = ctk.CTkEntry(ventana1, 
-                     width=190, 
-                     height=30, 
-                     bg_color="#d7bb9f",
-                     border_width=3,
-                     border_color="#a06553")
-caja2.place(x=560, y=350)
+image_1 = ctk.CTkImage(light_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/Repositorio/LOGO AEROLINEA.png"),
+                       dark_image=Image.open("D:/GABO/2024/UNIVERSIDAD/SEMESTRE 1/FUNDAMENTOS DE PROGRAMACIÓN IMPERATIVA/PROYECTO FINAL/Repositorio/LOGO AEROLINEA.png"),
+                       size = (340, 340)
+                       )
 
-#CREACION DE BOTON
+image1_label = ctk.CTkLabel(ventana1, 
+                            image=image_1, 
+                            text = "", 
+                            bg_color="#d7bb9f"
+                            )
 
+#------------------------------------TÍTULOS----------------------------------------
 
-boton = ctk.CTkButton(ventana1, 
-                      text="Realizar Check-In",
-                      text_color="white", 
-                      width=150, 
-                      height=40,
-                      font=("Poppins", 16, "bold"),
-                      bg_color="#d7bb9f",
-                      fg_color="#a06553",
-                      cursor="hand2",
-                      hover_color="beige",
-                      command = check_in)
-boton.place(x=425, y=440)
+title_1 = ctk.CTkLabel(ventana1, 
+                       text="Código", 
+                       width=150, 
+                       height=40, 
+                       font=("Helvetica", 18, "bold"),
+                       text_color="brown",
+                       bg_color="#d7bb9f",
+                       fg_color="beige",
+                       corner_radius=10
+                       )
+
+title_2 = ctk.CTkLabel(ventana1, 
+                       text="Apellido", 
+                       width=150, 
+                       height=40, 
+                       font=("Helvetica", 18, "bold"),
+                       text_color="brown",
+                       bg_color="#d7bb9f",
+                       fg_color="beige",
+                       corner_radius=10
+                       )
+
+#------------------------------------CAJAS DE TEXTO----------------------------------------
+
+text_box_1 = ctk.CTkEntry(ventana1, 
+                        width=250, 
+                        height=50, 
+                        bg_color="#d7bb9f", 
+                        fg_color="beige",
+                        font = font_1,
+                        border_width=3,
+                        border_color="#a06553"
+                        )
+
+text_box_2 = ctk.CTkEntry(ventana1, 
+                        width=250, 
+                        height=50,
+                        font = font_1, 
+                        bg_color="#d7bb9f",
+                        fg_color="beige",
+                        border_width=3,
+                        border_color="#a06553"
+                        )
+
+#------------------------------------BOTON----------------------------------------
+
+button_1 = ctk.CTkButton(ventana1, 
+                        text="Realizar Check-In",
+                        text_color="white", 
+                        width=200, 
+                        height=50,
+                        font=("Helvetica", 18, "bold"),
+                        bg_color="#d7bb9f",
+                        fg_color="#a06553",
+                        cursor="hand2",
+                        hover_color="lightblue",
+                        border_width=3,
+                        border_color="#a06553",
+                        corner_radius=10,
+                        command = check_in
+                        )
+
+#------------------------------------POSICIONAMIENTO----------------------------------------
+
+image1_label.place(x=330, y=1)
+title_1.place(x=250, y=300)
+title_2.place(x=600, y=300)
+text_box_1.place(x=200, y=350)
+text_box_2.place(x=550, y=350)
+button_1.place(x=400, y=440)
 
 ventana1.mainloop()
